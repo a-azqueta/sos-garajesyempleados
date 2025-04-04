@@ -1,5 +1,8 @@
-#Usar la imagen desarrollo
-FROM ubuntu24-jdk21-mvn:latest 
+#Usar la imagen ubuntu
+FROM ubuntu:24.04
+RUN apt-get update
+RUN apt-get install openjdk-21-jdk -y
+RUN apt-get install maven -y
 #Configuramos el directiorio de trabajo
 WORKDIR /app
 #Copiamos el fichero jar
